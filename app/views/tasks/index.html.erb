@@ -1,0 +1,105 @@
+
+
+<div class="all">
+
+<header class="container-fluid bg-success d-flex justify-content-center">
+
+  <p class="text-light mb-0 p-2 fs-6">
+
+    Winter Calendar
+
+  </p>
+
+</header>
+
+<h1 class="title">December</h1>
+
+  <ol>
+
+<li class="day-name">Sun</li>
+<li class="day-name">Mon</li>
+<li class="day-name">Tue</li>
+<li class="day-name">Wed</li>
+<li class="day-name">Thu</li>
+<li class="day-name">Fri</li>
+<li class="day-name">Sat</li>
+
+
+
+
+
+
+
+<li>28</li>
+<li>29</li>
+<li>30</li>
+
+    <li class="first-day"><a href="/tasks/new">1</a></li>
+    <li class="ancho"><a href="/tasks/new">2</a></li>
+    <li class="ancho"><a href="/tasks/new">3</a></li>
+    <li class="ancho"><a href="/tasks/new">4</a></li>
+    <li class="ancho"><a href="/tasks/new">5</a></li>
+    <li class="ancho"><a href="/tasks/new">6</a></li>
+    <li class="ancho"><a href="/tasks/new">7</a></li>
+    <li class="ancho"><a href="/tasks/new">8</a></li>
+    <li class="ancho"><a href="/tasks/new">9</a></li>
+    <li class="ancho"><a href="/tasks/new">10</a></li>
+    <li class="ancho"><a href="/tasks/new">11</a></li>
+    <li class="ancho"><a href="/tasks/new">12</a></li>
+    <li class="ancho"><a href="/tasks/new">13</a></li>
+    <li class="ancho"><a href="/tasks/new">14</a></li>
+    <li class="ancho"><a href="/tasks/new">15</a></li>
+    <li class="ancho"><a href="/tasks/new">16</a></li>
+    <li class="ancho"><a href="/tasks/new">17</a></li>
+    <li class="ancho"><a href="/tasks/new">18</a></li>
+    <li class="ancho"><a href="/tasks/new">19</a></li>
+    <li class="ancho"><a href="/tasks/new">20</a></li>
+    <li class="ancho"><a href="/tasks/new">21</a></li>
+    <li class="ancho"><a href="/tasks/new">22</a></li>
+    <li class="ancho"><a href="/tasks/new">23</a></li>
+    <li class="ancho"><a href="/tasks/new">24</a></li>
+    <li class="ancho"><a href="/tasks/new">25</a></li>
+    <li class="ancho"><a href="/tasks/new">26</a></li>
+    <li class="ancho"><a href="/tasks/new">27</a></li>
+    <li class="ancho"><a href="/tasks/new">28</a></li>
+    <li class="ancho"><a href="/tasks/new">29</a></li>
+    <li class="ancho"><a href="/tasks/new">30</a></li>
+    <li class="ancho"><a href="/tasks/new">31</a></li>
+
+</ol>
+</div>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1 class="tare">Tasks</h1>
+
+<table class="work">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Due date</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.name %></td>
+        <td><%= task.description %></td>
+        <td><%= task.due_date %></td>
+        <td><%= task.category_id %></td>
+
+
+<td><%= link_to 'Show', task %></td>
+<td><%= button_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
